@@ -1,2 +1,2 @@
 # Log4Net.ConventionConfigurator
-Programmatic configuration by convention
+Configure Log4Net by picking up configuration implementations
