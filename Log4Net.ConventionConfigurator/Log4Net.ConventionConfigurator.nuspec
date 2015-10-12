@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Log4Net.ConventionConfigurator</id>
+    <version>1.0.0.0</version>
+    <authors>Alfred Söderdahl</authors>
+    <owners>Alfred Söderdahl</owners>
+    <licenseUrl>https://github.com/AlfredSoderdahl/Log4Net.ConventionConfigurator/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/AlfredSoderdahl/Log4Net.ConventionConfigurator</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Configure Log4Net by picking up configuration implementations</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright © 2015 Alfred Söderdahl</copyright>
+    <tags>Reflection Conventions</tags>
+  </metadata>
+</package>
