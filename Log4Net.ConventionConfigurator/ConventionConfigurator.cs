@@ -1,14 +1,23 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Reflection;
-using ConventionByReflection;
 using log4net;
 using log4net.Appender;
 using log4net.Config;
 using log4net.Core;
 using log4net.Repository.Hierarchy;
+using Activator = ConventionByReflection.Activator;
 
 namespace Log4Net.ConventionConfigurator {
     public static class ConventionConfigurator {
+        public static void Configure(string level) {
+            var parsedLevel = LogManager.GetRepository().LevelMap[level];
+            if (parsedLevel == null)
+                throw new ArgumentException($"{level} is not a known Level");
+
+            Configure(parsedLevel);
+        }
+
         public static void Configure(Level level) {
             var callingAssembly = Assembly.GetCallingAssembly();
             var repository = (Hierarchy) LogManager.GetRepository();
