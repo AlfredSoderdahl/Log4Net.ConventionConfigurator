@@ -18,7 +18,7 @@ namespace Log4Net.ConventionConfigurator {
 
         private static IAppender[] FindAppenders(Level level, Assembly callingAssembly) {
             return Activator.CreateInstances<IConfigureLogging>(callingAssembly)
-                            .Where(i => i.Level <= level)
+                            .Where(i => i.Level >= level)
                             .SelectMany(s => s.GetAppenders()).ToArray();
         }
     }
